@@ -1,0 +1,166 @@
+@mixin proxima-extrabold {
+    font-family: proxima-nova, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+@mixin proxima-bold {
+    font-family: proxima-nova, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+@mixin proxima-regular {
+    font-family: proxima-nova, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+@mixin proxima-light {
+    font-family: proxima-nova, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+    align-items: center;
+    // width: 100%;
+    @media screen and (max-width: 480px) {
+        flex-wrap: wrap;
+    }
+    .login {
+        display: flex;
+        min-width: 480px;
+        width: 80%;
+        flex-flow: column nowrap;
+        flex: 0 1 50%;
+        align-content: center;
+        align-items: center;
+        // border-right: 4px solid #3068D9;
+        @media screen and (max-width: 480px) {
+            border-style: hidden;
+        }
+        .login_logo {
+            // width: 80%;
+            width: 40vw;
+            display: inline-block;
+            position: relative;
+        }
+        p {
+            @include proxima-regular;
+            color: #4D4D4D;
+            line-height: 1.5;
+            // font-size: 1.7em;
+            font-size: 1.4vw;
+            text-align: center;
+            width: 80%;
+        }
+        input {
+            @include proxima-bold;
+        }
+        button {
+            @include proxima-bold;
+            color: #fff;
+            background-color: #3068D9;
+            display: block;
+            border-style: none;
+            border-radius: 20px;
+            width: 100%;
+            height: 4vh;
+            margin-top: 2vh;
+        }
+        .login_imgs {
+            display: inline-block;
+            display: flex;
+            @media screen and (max-width: 480px) {
+                display: none;
+            }
+            img {
+                width: 10vw;
+            }
+            .login_yellowBean {
+                justify-content: flex-start;
+                margin-right: 15vw;
+            }
+            .login_orangeBean {
+                justify-content: flex-end;
+            }
+        }
+        form {
+            @include proxima-bold();
+        }
+        
+    }
+    .test {
+        top: 5%;
+        right: 50%;
+        position: absolute;
+        height: 80%;
+        border-right: 4px solid #3068D9;
+        @media screen and (max-width: 480px) {
+            top: 0%;
+            right: 0%;
+            position: relative;
+            height: 0%;
+            border-right-style: none;
+        }
+        @media screen and (max-width: 480px) {
+            width: 90%;
+            height: 75px;
+            border-bottom: 4px solid #3068D9;
+            // margin-bottom: 50px;
+        }
+        
+    }
+    .register {
+        display: flex;
+        min-width: 480px;
+        width: 80%;
+        flex-flow: column nowrap;
+        flex: 0 1 50%;
+        align-content: center;
+        align-items: center;
+        height: 100%;
+        // @media screen and (max-width: 480px) {
+        //     width: 90%;
+        //     height: 75px;
+        //     border-top: 4px solid #3068D9;
+        // }
+        p {
+            @include proxima-regular();
+            color: #4D4D4D;
+            font-size: 1.4vw;
+            // font-size: 1.7em;
+            text-align: center;
+            width: 80%;
+        }
+        h2 {
+            @include proxima-extrabold();
+            color: #4D4D4D;
+            // font-size: 2em;
+            font-size: 2vw;
+            margin-bottom: -1vh;
+        }
+        .register_required {
+            @include proxima-light();
+            font-size: 0.7em;
+            color: #F27D16;
+        }
+        form {
+            input {
+                margin: 1.5vh;
+            }
+        }
+        button {
+            @include proxima-bold;
+            color: #fff;
+            background-color: #3068D9;
+            border-style: none;
+            border-radius: 20px;
+            margin-top: 2vh;
+            width: 100%;
+            height: 4vh;
+        }
+    }
+}
